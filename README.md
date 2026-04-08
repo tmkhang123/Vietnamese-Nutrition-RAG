@@ -1,59 +1,90 @@
-# He thong hoi dap dinh duong (Hybrid RAG)
+# Vietnamese Nutrition RAG
 
-Ban toi gian hien tai: de chay nhanh, de demo, de nop.
+Hệ thống hỏi đáp dinh dưỡng và sức khỏe bằng tiếng Việt, sử dụng kiến trúc Hybrid RAG.
 
-## File quan trong
+## Tổng quan
 
-Tat ca file code da duoc dua vao thu muc `main/`.
+Người dùng đặt câu hỏi tiếng Việt (ví dụ: *"bị tiểu đường nên ăn gì?"*), hệ thống truy xuất thông tin từ 2 nguồn rồi dùng LLM tổng hợp câu trả lời:
 
-- `main/Run_Project.ipynb`: notebook chay project tu A-Z (khuyen dung).
-- `main/app.py`: giao dien chat Streamlit.
-- `main/pipeline.py`: pipeline chinh (NLP + USDA lookup + semantic retrieval + generation).
-- `main/build_usda_db.py`: tao `usda_food.db` tu USDA CSV.
-- `vi_food_mapping.csv`: mapping ten mon Viet -> tu khoa Anh.
-- `medical_knowledge.jsonl`: tap van ban y khoa mau.
-- `main/requirements.txt`: thu vien can cai.
-- `FoodData_Central_csv_2025-12-18/...`: du lieu USDA goc.
+- **Nhánh A — SQLite (USDA)**: tra cứu thành phần dinh dưỡng chính xác (13,661 món)
+- **Nhánh B — ChromaDB**: tìm kiếm ngữ nghĩa trong tài liệu y tế tiếng Việt (BM25 + cosine + Reciprocal Rank Fusion)
 
-## Cach chay khuyen nghi (Notebook)
+## Cấu trúc thư mục
 
-### 1) Cai thu vien
+```
+├── main/               # Bản thô ban đầu (không sửa)
+├── src/
+│   ├── nlp/            # preprocessor, retriever (BM25+ChromaDB), NER, classifier
+│   ├── database/       # sqlite_manager, vector_store (ChromaDB)
+│   ├── generation/     # generator (Ollama LLM)
+│   └── data_pipeline/  # chunker, embedder
+├── data/
+│   ├── usda_food.db    # SQLite USDA — 13,661 món ăn
+│   ├── vi_food_mapping.csv  # Ánh xạ tên Việt → từ khóa Anh
+│   └── raw/articles/   # Bài viết y tế tiếng Việt (vinmec, hellobacsi)
+├── Interface/chatbot/  # Spring Boot UI (JWT auth, gọi Python qua CLI)
+└── configs/config.yaml # Cấu hình tập trung
+```
 
+## Yêu cầu
+
+**Python:**
 ```bash
+conda create -n nutrition-rag python=3.10
+conda activate nutrition-rag
 pip install -r main/requirements.txt
 ```
 
-### 2) Mo notebook
+**Java:** JDK 21 trở lên
 
-Mo `main/Run_Project.ipynb`, sau do chay lan luot tung cell.
-
-Notebook da co san cac buoc:
-- set working directory,
-- build `usda_food.db` neu chua co,
-- khoi tao he thong,
-- test cau hoi mau.
-
-## Cach chay bang command line
-
-### 1) Tao database
-
+**Ollama:**
 ```bash
-python main/build_usda_db.py
+ollama pull qwen2.5:3b
 ```
 
-### 2) Chay Streamlit app
+## Chạy bản thô (nhanh nhất)
 
 ```bash
+conda activate nutrition-rag
 streamlit run main/app.py
 ```
 
-## Tuy chon Ollama (LLM local)
+Hoặc dùng notebook:
+```bash
+jupyter notebook main/Run_Project.ipynb
+```
 
-- Neu muon sinh cau tra loi bang LLM local:
-  - `ollama pull qwen2.5:3b`
-- Neu chua co Ollama, he thong van chay voi fallback answer.
+## Chạy với Spring Boot UI
 
-## Mo rong du lieu
+**Bước 1 — Khởi động Python backend** (terminal 1):
+```bash
+conda activate nutrition-rag
+```
 
-- Bo sung mapping trong `vi_food_mapping.csv` de tra USDA dung hon.
-- Them tai lieu vao `medical_knowledge.jsonl` de tang chat luong tư van.
+**Bước 2 — Chạy Spring Boot** (terminal 2):
+```bash
+cd Interface/chatbot
+$env:JAVA_HOME = "C:\Program Files\Java\jdk-23"
+./mvnw spring-boot:run
+```
+
+Mở trình duyệt: [http://localhost:8081](http://localhost:8081)
+
+## Cấu hình
+
+Sửa `configs/config.yaml` để thay đổi model hoặc đường dẫn:
+
+```yaml
+llm_model: "qwen2.5:3b"   # đổi thành "vistral" khi sẵn sàng
+llm_backend: "ollama"
+top_k: 5
+chunk_size: 500
+```
+
+## Phân công nhóm
+
+| Thành viên | Phụ trách |
+|---|---|
+| TV1 | Hybrid retrieval (BM25 + ChromaDB + RRF), fine-tune PhoBERT NER, tích hợp LLM |
+| TV2 | Thu thập dữ liệu dinh dưỡng & y tế, gán nhãn NER 300 câu |
+| TV3 | Spring Boot UI, tích hợp hệ thống, RAGAS evaluation, demo |
