@@ -1,0 +1,21 @@
+{
+  "input_dir": "D:\\Data\\File for Google Drive real\\Project\\Vietnamese-Nutrition-RAG\\Vietnamese-Nutrition-RAG\\data\\processed\\articles_cleaned",
+  "output_jsonl": "D:\\Data\\File for Google Drive real\\Project\\Vietnamese-Nutrition-RAG\\Vietnamese-Nutrition-RAG\\data\\processed\\rag_corpus.jsonl",
+  "total_chunks": 558,
+  "sources": {
+    "Dietary_Guidelines_for_Americans_2020-2025-compressed_1": 532,
+    "NutritionFactWHO": 26
+  },
+  "schema": {
+    "id": "unique chunk id",
+    "source": "document source",
+    "lang": "language code",
+    "topic": "topic tag",
+    "text": "retrieval text content"
+  },
+  "chunking": {
+    "chunk_size_chars": 850,
+    "overlap_chars": 120,
+    "min_chunk_len_chars": 120
+  }
+}

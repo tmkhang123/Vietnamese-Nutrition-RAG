@@ -18,9 +18,8 @@ UNICODE_REPLACEMENTS = {
 def normalize_unicode(text):
     for char, replacement in UNICODE_REPLACEMENTS.items():
         text = text.replace(char, replacement)
-    # Chuyen cac ky tu co dau (e.g. accented letters) ve dang ASCII gan nhat
-    text = unicodedata.normalize("NFKD", text)
-    text = text.encode("ascii", "ignore").decode("ascii")
+    # Chuan hoa Unicode, GIU NGUYEN dau tieng Viet
+    text = unicodedata.normalize("NFC", text)
     return text
 
 def clean_text(text):

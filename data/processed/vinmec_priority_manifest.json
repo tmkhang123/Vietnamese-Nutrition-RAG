@@ -1,0 +1,55 @@
+{
+  "input_dir": "D:\\Data\\File for Google Drive real\\Project\\Vietnamese-Nutrition-RAG\\Vietnamese-Nutrition-RAG\\data\\raw\\vinmec_nutrition_articles",
+  "output_jsonl": "D:\\Data\\File for Google Drive real\\Project\\Vietnamese-Nutrition-RAG\\Vietnamese-Nutrition-RAG\\data\\processed\\vinmec_priority_corpus.jsonl",
+  "total_files": 500,
+  "total_raw_chunks": 4643,
+  "total_kept_chunks": 3974,
+  "keep_ratio": 0.8559,
+  "topic_distribution": {
+    "diabetes": 941,
+    "hypertension": 797,
+    "nutrition_general": 1194,
+    "lipids": 87,
+    "weight_loss": 929,
+    "gout": 26
+  },
+  "top_labels": {
+    "recommendation": 2403,
+    "risk_warning": 1363,
+    "quantitative": 1003,
+    "topic:diabetes": 940,
+    "topic:weight_loss": 926,
+    "topic:hypertension": 803,
+    "topic:lipids": 83,
+    "contains_noise": 38,
+    "topic:gout": 24
+  },
+  "top_files_by_kept_chunks": {
+    "113_16-loai-thuc-pham-tot-nhat-de-kiem-soat-benh-tieu-duong-vi": 24,
+    "245_bai-bao-kho-hoc-tren-cac-tap-chi-quoc-te-cua-vien-nghien-cuu-te-bao-goc-va-cong-nghe-gen-vinmec-vi": 23,
+    "356_benh-tieu-duong-loai-2-va-suc-khoe-da-vi": 23,
+    "139_27-loai-thuc-pham-co-giup-ban-nap-them-nang-luong-vi": 21,
+    "140_29-thuc-pham-tot-cho-suc-khoe-gia-cuc-re-vi": 20,
+    "126_20-loai-thuc-pham-tot-nhat-cho-nguoi-bi-benh-than-vi": 19,
+    "144_3-khuyen-cao-giup-han-che-thuc-pham-chua-chat-beo-bao-hoa-muoi-duong-ruou-vi": 19,
+    "57_11-loai-trai-cay-tot-nhat-de-giam-can-vi": 19,
+    "118_17-thuc-pham-nen-tranh-neu-cua-ban-khong-tot-vi": 17,
+    "127_20-ly-do-pho-bien-khien-ban-khong-giam-can-duoc-vi": 17,
+    "137_25-sieu-trai-cay-ban-nen-bo-sung-vao-che-do-an-uong-cua-minh-vi": 17,
+    "252_ban-biet-gi-ve-cac-che-do-kieng-dang-thinh-hanh-vi": 17,
+    "47_11-benh-ung-thu-duong-tieu-hoa-vi": 17,
+    "524_cac-loai-hat-giau-dinh-duong-tot-cho-suc-khoe-vi": 17,
+    "89_13-loai-thuc-pham-co-lam-giam-nguy-co-ung-thu-2-vi": 17,
+    "101_15-loai-thuc-pham-co-giup-ngan-ngua-tac-dong-mach-vi": 16,
+    "182_7-thuc-pham-trang-nen-thay-the-vi": 16,
+    "260_ban-co-giam-can-bang-duc-nhip-dieu-aerobic-khong-vi": 16,
+    "36_10-thoi-quen-buoi-sang-giup-ban-giam-can-vi": 16,
+    "130_21-loai-thuc-pham-co-cuu-trai-tim-cua-ban-vi": 15
+  },
+  "config": {
+    "chunk_size": 900,
+    "overlap": 120,
+    "min_chars": 120,
+    "min_score": 1.5
+  }
+}

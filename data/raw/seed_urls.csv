@@ -1,0 +1,38 @@
+topic,subtopic,authority,source_type,lang,priority,url,note
+nutrition_general,healthy_diet,WHO,guideline,en,P0,https://www.who.int/news-room/fact-sheets/detail/healthy-diet,Core global recommendation
+nutrition_general,healthy_diet,WHO,pdf,en,P0,https://cdn.who.int/media/docs/default-source/healthy-diet/healthy-diet-fact-sheet-394.pdf,Printable fact sheet
+nutrition_general,general_nutrition,MedlinePlus,patient_education,en,P1,https://medlineplus.gov/nutrition.html,Basic nutrition concepts
+nutrition_general,general_nutrition,CDC,guideline,en,P1,https://www.cdc.gov/nutrition/php/guidelines-recommendations/index.html,Public-health nutrition guidance
+nutrition_general,healthy_eating,CDC,patient_education,en,P1,https://www.cdc.gov/nutrition/features/healthy-eating-tips.html,Simple healthy eating tips
+nutrition_general,dietary_pattern,DietaryGuidelines,guideline,en,P1,https://www.dietaryguidelines.gov/sites/default/files/2021-03/Dietary_Guidelines_for_Americans-2020-2025.pdf,Official DGA PDF
+nutrition_general,food_guidelines,FAO,guideline,en,P1,https://www.fao.org/nutrition/education/food-dietary-guidelines,Food-based dietary guidelines hub
+nutrition_general,official_portal,Viện Dinh Dưỡng,official_portal,vi,P0,https://viendinhduong.vn/,Vietnam official nutrition portal
+nutrition_general,nutrition_recommendations,Viện Dinh Dưỡng TP.HCM,pdf,vi,P1,https://viendinhduongtphcm.org/Media/Tai_lieu_chuyen_mon/Nhu_cau_dinh_duong_khuyen_nghi.pdf,Vietnamese recommendation PDF
+diabetes,overview,MedlinePlus,patient_education,en,P1,https://medlineplus.gov/diabeticdiet.html,Diabetes diet overview
+diabetes,meal_planning,MedlinePlus,patient_education,en,P1,https://medlineplus.gov/ency/article/007429.htm,Type 2 diabetes meal planning
+diabetes,nutrition_guidance,ADA,guideline,en,P0,https://diabetes.org/food-nutrition,ADA nutrition hub
+diabetes,eating_for_management,ADA,guideline,en,P0,https://diabetes.org/food-nutrition/eating-for-diabetes-management,High value for diabetes QA
+diabetes,practical_plate,ADA,patient_education,en,P1,https://diabetesfoodhub.org/blog/what-diabetes-plate,Practical plate method
+diabetes,foods,ADA,patient_education,en,P1,https://diabetes.org/food-nutrition/food-and-blood-sugar/diabetes-superstar-foods,Food suggestions
+diabetes,vietnamese_article,Vinmec,patient_education,vi,P2,https://www.vinmec.com/vie/bai-viet/nguoi-bi-benh-tieu-duong-nen-an-gi-va-nen-kieng-gi-vi,Vietnamese patient article
+diabetes,vietnamese_article,Vinmec,patient_education,vi,P2,https://www.vinmec.com/vie/bai-viet/16-loai-thuc-pham-tot-nhat-de-kiem-soat-benh-tieu-duong-vi,Vietnamese diabetes foods
+diabetes,vietnamese_article,Vinmec,patient_education,vi,P2,https://www.vinmec.com/vie/bai-viet/thuc-don-7-ngay-cho-nguoi-tieu-duong-vi,Vietnamese menu sample
+diabetes,vietnamese_guidance,Viện Dinh Dưỡng TP.HCM,patient_education,vi,P1,https://viendinhduongtphcm.org/vi/dai-thao-duong/dinh-duong-cho-nguoi-benh-tieu-duong.html,Vietnamese diabetes nutrition
+diabetes,vietnamese_hospital,BV 108,patient_education,vi,P2,https://www.benhvien108.vn/dinh-duong-cho-nguoi-benh-dai-thao-duong.htm,Clinical VN source
+hypertension,sodium_limit,WHO,guideline,en,P0,https://www.who.int/news-room/fact-sheets/detail/healthy-diet,Contains sodium recommendation
+hypertension,diet_lifestyle,AHA,guideline,en,P0,https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/nutrition-basics/aha-diet-and-lifestyle-recommendations,Heart-healthy framework
+hypertension,salt_reduction,AHA,patient_education,en,P1,https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure/shaking-the-salt-habit-to-lower-high-blood-pressure,Low sodium behavior guide
+hypertension,sodium_overview,AHA,patient_education,en,P1,https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sodium/sodium-and-salt,Clear sodium section
+hypertension,diet_for_bp,AHA,patient_education,en,P1,https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure/managing-blood-pressure-with-a-heart-healthy-diet,Diet for blood pressure
+hypertension,vn_policy,Bộ Y Tế,policy,vi,P1,https://thuvienphapluat.vn/van-ban/The-thao-Y-te/Quyet-dinh-2033-QD-BYT-2018-thuc-hien-giam-muoi-trong-khau-phan-an-de-phong-tang-huyet-ap-378252.aspx,National reduction-salt policy text
+hypertension,vn_cdc_article,VNCDC,public_health,vi,P1,https://vncdc.gov.vn/an-thua-muoi-va-nguy-co-mac-tang-huyet-ap-benh-tim-mach-va-cac-benh-tat-khac-nd15661.html,Vietnam CDC educational article
+gout,gout_overview,NHS,patient_education,en,P1,https://www.nhs.uk/conditions/gout/,Trusted gout overview
+gout,dietary_advice,NHS Hospital,pdf,en,P1,https://www.wsh.nhs.uk/CMS-Documents/Patient-leaflets/NutritionandDieteticService/6753-1-Gout-and-diet.pdf,PDF with diet recommendations
+gout,dietary_advice,NHS Hospital,pdf,en,P1,https://www.ouh.nhs.uk/media/wyspzszh/82828pgout.pdf,Alternative NHS PDF
+gout,dietary_advice,UK Gout Society,pdf,en,P2,https://www.ukgoutsociety.org/PDFs/goutsociety-allaboutgoutanddiet-0917.pdf,Supplementary patient material
+gout,dietary_advice,Mayo Clinic,patient_education,en,P1,https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/gout-diet/art-20048524,Popular and clear gout diet
+gout,vietnamese_article,Hello Bacsi,patient_education,vi,P2,https://hellobacsi.com/benh-co-xuong-khop/viem-khop/benh-gout-nen-an-gi-va-kieng-gi/,Vietnamese gout article
+gout,vietnamese_article,Hello Bacsi,patient_education,vi,P2,https://hellobacsi.com/benh-co-xuong-khop/viem-khop/che-do-an-cho-nguoi-benh-gout/,Vietnamese gout diet article
+weight_loss,basic_diets,MedlinePlus,patient_education,en,P1,https://medlineplus.gov/diets.html,General diet hub
+weight_loss,healthy_weight,CDC,guideline,en,P1,https://www.cdc.gov/healthy-weight-growth/healthy-eating/index.html,Healthy eating for weight control
+lipids,heart_diet,AHA,guideline,en,P1,https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/nutrition-basics/aha-diet-and-lifestyle-recommendations,Use for dyslipidemia context
