@@ -1,0 +1,30 @@
+# =====================================================
+# CẤU HÌNH TRUNG TÂM — Hybrid RAG Dinh dưỡng
+# =====================================================
+
+# --- Paths ---
+sqlite_path: "data/usda_food.db"
+vi_mapping_path: "data/vi_food_mapping.csv"
+medical_docs_path: "data/medical_knowledge.jsonl"
+
+chroma_persist_dir: "data/chroma_db"
+chroma_collection: "health_articles"
+
+ner_model_path: "models/ner_phobert/"
+
+# --- Models ---
+embedding_model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+llm_model: "vistral"     # vistral | qwen2.5:3b | phogpt
+llm_backend: "ollama"   # ollama | huggingface
+
+# --- Retrieval ---
+top_k: 5
+similarity_threshold: 0.5
+
+# --- Chunking ---
+chunk_size: 500
+chunk_overlap: 100
+
+# --- Preprocessing ---
+custom_dict_path: "configs/custom_dict.txt"
+stopwords_path: "configs/stopwords.txt"

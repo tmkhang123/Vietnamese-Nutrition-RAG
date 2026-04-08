@@ -1,0 +1,32 @@
+# USDA source CSV (3.1GB)
+FoodData_Central_csv_2025-12-18/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc files
+*.xls
+*.xlsx
+*.pdf
+
+# Spring Boot UI — repo riêng của Bạn 3 (Daniel-DangNam/chatbot)
+Interface/chatbot/
+
+# Env
+.env
