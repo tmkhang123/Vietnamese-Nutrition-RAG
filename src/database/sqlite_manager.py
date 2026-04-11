@@ -10,10 +10,7 @@ class UsdaLookupError(Exception):
 
 
 class SqliteManager:
-    """
-    Quan ly SQLite - tra cuu dinh duong tu USDA database.
-    Tach ra tu UsdaRepository trong main/pipeline.py.
-    """
+    """USDA SQLite lookup — Vietnamese food name → nutrient value."""
 
     def __init__(self, db_path: str | Path, vi_mapping_path: str | Path):
         self.db_path = Path(db_path)
@@ -35,8 +32,7 @@ class SqliteManager:
     def _connect(self) -> sqlite3.Connection:
         if not self.db_path.exists():
             raise UsdaLookupError(
-                f"Database khong tim thay: {self.db_path}\n"
-                "Hay chay main/build_usda_db.py truoc."
+                f"DB not found: {self.db_path}. Run main/build_usda_db.py first."
             )
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
@@ -78,7 +74,7 @@ class SqliteManager:
         }
 
     def lookup(self, vi_name: str, nutrient_name: str) -> dict | None:
-        """Ten mon Viet + ten nutrient -> ket qua USDA. Tra None neu khong tim thay."""
+        """Vietnamese food + nutrient name → USDA row, or None if not found."""
         food = self.find_food(vi_name)
         if not food:
             return None
@@ -103,12 +99,12 @@ if __name__ == "__main__":
         vi_mapping_path=BASE / "data/vi_food_mapping.csv",
     )
 
-    print("Cac mon da mapping:", db.list_mapped_foods())
+    print("mapped foods:", db.list_mapped_foods())
     print()
 
     result = db.lookup("uc ga", "Protein")
     if result:
-        print(f"Ket qua: {result['food_description']}")
+        print(f"{result['food_description']}")
         print(f"  {result['nutrient_name']}: {result['amount_per_100g']} {result['unit']} / 100g")
     else:
-        print("Khong tim thay.")
+        print("not found.")

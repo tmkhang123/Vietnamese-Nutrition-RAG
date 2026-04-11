@@ -1,90 +1,167 @@
 # Vietnamese Nutrition RAG
 
-Hệ thống hỏi đáp dinh dưỡng và sức khỏe bằng tiếng Việt, sử dụng kiến trúc Hybrid RAG.
+Hệ thống hỏi đáp dinh dưỡng và sức khỏe tiếng Việt, kiến trúc Hybrid RAG.
 
-## Tổng quan
+Người dùng đặt câu hỏi → hệ thống tra cứu từ 2 nguồn → LLM tổng hợp câu trả lời:
 
-Người dùng đặt câu hỏi tiếng Việt (ví dụ: *"bị tiểu đường nên ăn gì?"*), hệ thống truy xuất thông tin từ 2 nguồn rồi dùng LLM tổng hợp câu trả lời:
+- **USDA SQLite** — dữ liệu dinh dưỡng chính xác (13,661 món)
+- **ChromaDB** — tìm kiếm ngữ nghĩa trong tài liệu y tế tiếng Việt (BM25 + cosine + RRF)
 
-- **Nhánh A — SQLite (USDA)**: tra cứu thành phần dinh dưỡng chính xác (13,661 món)
-- **Nhánh B — ChromaDB**: tìm kiếm ngữ nghĩa trong tài liệu y tế tiếng Việt (BM25 + cosine + Reciprocal Rank Fusion)
+---
+
+## Kiến trúc
+
+```
+Câu hỏi (tiếng Việt)
+    │
+    ▼
+Preprocessor (underthesea)
+    │
+    ▼
+NER — PhoBERT fine-tuned (FOOD / DISEASE / NUTRIENT / SYMPTOM)
+    │
+    ▼
+Classifier → NUTRITION_LOOKUP / HEALTH_ADVICE / BOTH
+    │
+    ├─── NUTRITION ──→ SQLite (USDA)
+    └─── HEALTH ─────→ ChromaDB + BM25 + RRF
+    │
+    ▼
+Ollama llama3.1:8b → câu trả lời
+```
+
+---
 
 ## Cấu trúc thư mục
 
 ```
-├── main/               # Bản thô ban đầu (không sửa)
 ├── src/
-│   ├── nlp/            # preprocessor, retriever (BM25+ChromaDB), NER, classifier
-│   ├── database/       # sqlite_manager, vector_store (ChromaDB)
-│   ├── generation/     # generator (Ollama LLM)
-│   └── data_pipeline/  # chunker, embedder
+│   ├── nlp/            # preprocessor, classifier, NER, retriever (BM25+ChromaDB+RRF)
+│   ├── database/       # sqlite_manager, vector_store
+│   ├── generation/     # generator (Ollama)
+│   └── data_pipeline/  # embedder, chunker, crawler
+├── main/
+│   └── rag_cli.py      # JSON bridge cho Spring Boot
+├── notebooks/
+│   ├── eval_7_groups.ipynb          # đánh giá 7 nhóm câu hỏi (chạy local)
+│   └── phobert_ner_finetune.ipynb   # fine-tune PhoBERT NER (chạy trên Colab)
+├── Interface/chatbot/  # Spring Boot UI (port 8081)
 ├── data/
-│   ├── usda_food.db    # SQLite USDA — 13,661 món ăn
-│   ├── vi_food_mapping.csv  # Ánh xạ tên Việt → từ khóa Anh
-│   └── raw/articles/   # Bài viết y tế tiếng Việt (vinmec, hellobacsi)
-├── Interface/chatbot/  # Spring Boot UI (JWT auth, gọi Python qua CLI)
-└── configs/config.yaml # Cấu hình tập trung
+│   ├── usda_food.db         # USDA SQLite
+│   ├── vi_food_mapping.csv  # mapping tên Việt → USDA
+│   └── raw/articles/        # bài viết y tế tiếng Việt (~184 bài)
+├── configs/config.yaml
+└── requirements.txt
 ```
 
-## Yêu cầu
+> **Không có trong repo** (phải tự tạo):
+> - `data/chroma_db/` — tự sinh khi chạy pipeline lần đầu
+> - `models/ner_phobert/` — fine-tune bằng notebook Colab rồi giải nén vào đây
 
-**Python:**
+---
+
+## Cài đặt
+
+**1. Python environment**
+
 ```bash
 conda create -n nutrition-rag python=3.10
 conda activate nutrition-rag
-pip install -r main/requirements.txt
+pip install -r requirements.txt
 ```
 
-**Java:** JDK 21 trở lên
+**2. Ollama + model**
 
-**Ollama:**
+Cài [Ollama](https://ollama.com), sau đó:
+
 ```bash
-ollama pull qwen2.5:3b
+ollama pull llama3.1:8b
 ```
 
-## Chạy bản thô (nhanh nhất)
+**3. NER model**
+
+Fine-tune bằng `notebooks/phobert_ner_finetune.ipynb` trên Colab, download file zip về, giải nén vào:
+
+```
+models/ner_phobert/phobert-ner-final/
+```
+
+---
+
+## Chạy notebook đánh giá (eval_7_groups)
+
+Notebook này kiểm tra pipeline với 7 nhóm câu hỏi đại diện, in intent, entities, sources, câu trả lời và tóm tắt accuracy/latency.
+
+**Chạy local:**
 
 ```bash
 conda activate nutrition-rag
-streamlit run main/app.py
+jupyter notebook notebooks/eval_7_groups.ipynb
 ```
 
-Hoặc dùng notebook:
+Chạy lần lượt từng cell. Lần đầu sẽ tự động embed ~184 bài vào ChromaDB (mất vài phút).
+
+---
+
+## Fine-tune PhoBERT NER (phobert_ner_finetune)
+
+Notebook này fine-tune `vinai/phobert-base` để nhận diện thực thể FOOD / DISEASE / NUTRIENT / SYMPTOM từ câu hỏi tiếng Việt.
+
+**Chạy trên Google Colab** (cần GPU T4):
+
+1. Upload `notebooks/phobert_ner_finetune.ipynb` lên Colab
+2. Upload file `data/ner_labels/ner_data_augmented.csv` khi được hỏi
+3. Chạy toàn bộ — huấn luyện 10 epoch, tự động download `phobert-ner-final.zip`
+4. Giải nén zip vào `models/ner_phobert/`
+
+---
+
+## Chạy web (Spring Boot)
+
+**Yêu cầu:** JDK 21+, Maven
+
+**Bước 1** — đảm bảo Ollama đang chạy:
+
 ```bash
-jupyter notebook main/Run_Project.ipynb
+ollama serve
 ```
 
-## Chạy với Spring Boot UI
+**Bước 2** — chạy Spring Boot:
 
-**Bước 1 — Khởi động Python backend** (terminal 1):
-```bash
-conda activate nutrition-rag
-```
-
-**Bước 2 — Chạy Spring Boot** (terminal 2):
 ```bash
 cd Interface/chatbot
+./mvnw spring-boot:run
+```
+
+Trên Windows nếu cần set JAVA_HOME:
+
+```powershell
 $env:JAVA_HOME = "C:\Program Files\Java\jdk-23"
 ./mvnw spring-boot:run
 ```
 
 Mở trình duyệt: [http://localhost:8081](http://localhost:8081)
 
+> Python backend không cần khởi động riêng — Spring Boot gọi trực tiếp `main/rag_cli.py` qua CLI.
+
+---
+
 ## Cấu hình
 
-Sửa `configs/config.yaml` để thay đổi model hoặc đường dẫn:
+Sửa `configs/config.yaml`:
 
 ```yaml
-llm_model: "qwen2.5:3b"   # đổi thành "vistral" khi sẵn sàng
-llm_backend: "ollama"
-top_k: 5
-chunk_size: 500
+llm_model: "llama3.1:8b"   # model Ollama
+top_k: 5                    # số chunk retrieval
+similarity_threshold: 0.5   # ngưỡng lọc ChromaDB
 ```
+
+---
 
 ## Phân công nhóm
 
 | Thành viên | Phụ trách |
 |---|---|
-| TV1 | Hybrid retrieval (BM25 + ChromaDB + RRF), fine-tune PhoBERT NER, tích hợp LLM |
-| TV2 | Thu thập dữ liệu dinh dưỡng & y tế, gán nhãn NER 300 câu |
-| TV3 | Spring Boot UI, tích hợp hệ thống, RAGAS evaluation, demo |
+| TV1 | Pipeline, Hybrid retrieval (BM25 + ChromaDB + RRF), fine-tune PhoBERT NER, tích hợp LLM |
+| TV2 | Thu thập dữ liệu dinh dưỡng & y tế, gán nhãn NER |
+| TV3 | Spring Boot UI, tích hợp hệ thống |

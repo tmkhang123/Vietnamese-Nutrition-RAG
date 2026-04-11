@@ -1,0 +1,301 @@
+id,sentence,tokens,labels
+1,100g ức gà có bao nhiêu protein?,100g ức_gà có bao_nhiêu protein ?,O B-FOOD O O B-NUTRIENT O
+2,Cá hồi chứa bao nhiêu omega-3?,Cá_hồi chứa bao_nhiêu omega-3 ?,B-FOOD O O B-NUTRIENT O
+3,Hàm lượng protein trong ức gà là bao nhiêu?,Hàm_lượng protein trong ức_gà là bao_nhiêu ?,O B-NUTRIENT O B-FOOD O O O
+4,Thịt bò có nhiều chất béo không?,Thịt_bò có nhiều chất_béo không ?,B-FOOD O O B-NUTRIENT O O
+5,Trứng gà cung cấp bao nhiêu calo?,Trứng_gà cung_cấp bao_nhiêu calo ?,B-FOOD O O B-NUTRIENT O
+6,Hàm lượng canxi trong sữa là bao nhiêu?,Hàm_lượng canxi trong sữa là bao_nhiêu ?,O B-NUTRIENT O B-FOOD O O O
+7,Cá thu có chứa omega-3 không?,Cá_thu có chứa omega-3 không ?,B-FOOD O O B-NUTRIENT O O
+8,Bao nhiêu protein trong 100g đậu phụ?,Bao_nhiêu protein trong 100g đậu_phụ ?,O B-NUTRIENT O O B-FOOD O
+9,Chuối có bao nhiêu kali?,Chuối có bao_nhiêu kali ?,B-FOOD O O B-NUTRIENT O
+10,Rau muống giàu sắt không?,Rau_muống giàu sắt không ?,B-FOOD O B-NUTRIENT O O
+11,Khoai lang chứa bao nhiêu tinh bột?,Khoai_lang chứa bao_nhiêu tinh_bột ?,B-FOOD O O B-NUTRIENT O
+12,Gạo lứt có nhiều chất xơ không?,Gạo_lứt có nhiều chất_xơ không ?,B-FOOD O O B-NUTRIENT O O
+13,Vitamin C trong cam là bao nhiêu mg?,Vitamin_C trong cam là bao_nhiêu mg ?,B-NUTRIENT O B-FOOD O O O O
+14,Óc chó có nhiều omega-3 hơn cá hồi không?,Óc_chó có nhiều omega-3 hơn cá_hồi không ?,B-FOOD O O B-NUTRIENT O B-FOOD O O
+15,Hàm lượng sắt trong rau cải là bao nhiêu?,Hàm_lượng sắt trong rau_cải là bao_nhiêu ?,O B-NUTRIENT O B-FOOD O O O
+16,Thịt heo có nhiều protein không?,Thịt_heo có nhiều protein không ?,B-FOOD O O B-NUTRIENT O O
+17,Bơ chứa nhiều chất béo lành mạnh không?,Bơ chứa nhiều chất_béo lành_mạnh không ?,B-FOOD O O B-NUTRIENT O O O
+18,Sữa chua cung cấp canxi và protein không?,Sữa_chua cung_cấp canxi và protein không ?,B-FOOD O B-NUTRIENT O B-NUTRIENT O O
+19,100g cá ba sa có bao nhiêu calo?,100g cá_ba_sa có bao_nhiêu calo ?,O B-FOOD O O B-NUTRIENT O
+20,Yến mạch có nhiều chất xơ và protein không?,Yến_mạch có nhiều chất_xơ và protein không ?,B-FOOD O O B-NUTRIENT O B-NUTRIENT O O
+21,Táo chứa bao nhiêu vitamin C?,Táo chứa bao_nhiêu vitamin_C ?,B-FOOD O O B-NUTRIENT O
+22,Lượng kẽm trong trứng gà là bao nhiêu?,Lượng kẽm trong trứng_gà là bao_nhiêu ?,O B-NUTRIENT O B-FOOD O O O
+23,Cà rốt có nhiều vitamin D không?,Cà_rốt có nhiều vitamin_D không ?,B-FOOD O O B-NUTRIENT O O
+24,Hạt điều giàu magiê không?,Hạt_điều giàu magiê không ?,B-FOOD O B-NUTRIENT O O
+25,Đậu xanh chứa bao nhiêu folate?,Đậu_xanh chứa bao_nhiêu folate ?,B-FOOD O O B-NUTRIENT O
+26,Tôm có nhiều protein không?,Tôm có nhiều protein không ?,B-FOOD O O B-NUTRIENT O O
+27,Cà chua có bao nhiêu calo?,Cà_chua có bao_nhiêu calo ?,B-FOOD O O B-NUTRIENT O
+28,Bưởi giàu vitamin C không?,Bưởi giàu vitamin_C không ?,B-FOOD O B-NUTRIENT O O
+29,Nước mía có nhiều đường không?,Nước_mía có nhiều đường không ?,B-FOOD O O B-NUTRIENT O O
+30,Dưa hấu chứa bao nhiêu nước?,Dưa_hấu chứa bao_nhiêu nước ?,B-FOOD O O O O
+31,Ức gà nướng có ít chất béo hơn thịt bò không?,Ức_gà nướng có ít chất_béo hơn thịt_bò không ?,B-FOOD O O O B-NUTRIENT O B-FOOD O O
+32,Lượng protein trong đậu phụ so với thịt heo như thế nào?,Lượng protein trong đậu_phụ so_với thịt_heo như_thế_nào ?,O B-NUTRIENT O B-FOOD O B-FOOD O O
+33,Khoai tây có bao nhiêu tinh bột?,Khoai_tây có bao_nhiêu tinh_bột ?,B-FOOD O O B-NUTRIENT O
+34,Bắp cải chứa bao nhiêu vitamin C và chất xơ?,Bắp_cải chứa bao_nhiêu vitamin_C và chất_xơ ?,B-FOOD O O B-NUTRIENT O B-NUTRIENT O
+35,Thành phần dinh dưỡng của sữa là gì?,Thành_phần dinh_dưỡng của sữa là gì ?,O O O B-FOOD O O O
+36,Cá hồi có nhiều vitamin D không?,Cá_hồi có nhiều vitamin_D không ?,B-FOOD O O B-NUTRIENT O O
+37,Ăn bơ mỗi ngày bổ sung được bao nhiêu chất béo?,Ăn bơ mỗi ngày bổ_sung được bao_nhiêu chất_béo ?,O B-FOOD O O O O O B-NUTRIENT O
+38,Gạo lứt có ít calo hơn gạo trắng không?,Gạo_lứt có ít calo hơn gạo_trắng không ?,B-FOOD O O B-NUTRIENT O B-FOOD O O
+39,Trứng gà chứa bao nhiêu vitamin D?,Trứng_gà chứa bao_nhiêu vitamin_D ?,B-FOOD O O B-NUTRIENT O
+40,Sắt trong thịt bò cao hơn rau muống không?,Sắt trong thịt_bò cao hơn rau_muống không ?,B-NUTRIENT O B-FOOD O O B-FOOD O O
+41,Tôm chứa bao nhiêu kẽm?,Tôm chứa bao_nhiêu kẽm ?,B-FOOD O O B-NUTRIENT O
+42,Cà chua có nhiều vitamin C không?,Cà_chua có nhiều vitamin_C không ?,B-FOOD O O B-NUTRIENT O O
+43,Óc chó có bao nhiêu calo?,Óc_chó có bao_nhiêu calo ?,B-FOOD O O B-NUTRIENT O
+44,Lượng canxi trong sữa chua là bao nhiêu?,Lượng canxi trong sữa_chua là bao_nhiêu ?,O B-NUTRIENT O B-FOOD O O O
+45,Chuối có nhiều kali hơn táo không?,Chuối có nhiều kali hơn táo không ?,B-FOOD O O B-NUTRIENT O B-FOOD O O
+46,Đậu xanh giàu protein không?,Đậu_xanh giàu protein không ?,B-FOOD O B-NUTRIENT O O
+47,Bưởi có ít calo không?,Bưởi có ít calo không ?,B-FOOD O O B-NUTRIENT O O
+48,Hàm lượng magiê trong hạt điều là bao nhiêu?,Hàm_lượng magiê trong hạt_điều là bao_nhiêu ?,O B-NUTRIENT O B-FOOD O O O
+49,Cá ba sa có ít chất béo không?,Cá_ba_sa có ít chất_béo không ?,B-FOOD O O B-NUTRIENT O O
+50,Folate trong đậu xanh có đủ cho phụ nữ mang thai không?,Folate trong đậu_xanh có đủ cho phụ_nữ mang_thai không ?,B-NUTRIENT O B-FOOD O O O O O O O
+51,Bị tiểu đường nên ăn gì?,Bị tiểu_đường nên ăn gì ?,O B-DISEASE O O O O
+52,Người bị gout nên kiêng gì?,Người bị gout nên kiêng gì ?,O O B-DISEASE O O O O
+53,Huyết áp cao nên ăn gì?,Huyết_áp_cao nên ăn gì ?,B-DISEASE O O O O
+54,Người bị tiểu đường có ăn cơm trắng được không?,Người bị tiểu_đường có ăn cơm_trắng được không ?,O O B-DISEASE O O B-FOOD O O O
+55,Bị cholesterol cao nên tránh ăn gì?,Bị cholesterol_cao nên tránh ăn gì ?,O B-DISEASE O O O O O
+56,Cá hồi có tốt cho người bị tim mạch không?,Cá_hồi có tốt cho người bị tim_mạch không ?,B-FOOD O O O O O B-DISEASE O O
+57,Người béo phì nên ăn thực phẩm gì?,Người béo_phì nên ăn thực_phẩm gì ?,O B-DISEASE O O O O O
+58,Bị gout có ăn tôm được không?,Bị gout có ăn tôm được không ?,O B-DISEASE O O B-FOOD O O O
+59,Người tiểu đường ăn gạo lứt thay cơm trắng được không?,Người tiểu_đường ăn gạo_lứt thay cơm_trắng được không ?,O B-DISEASE O B-FOOD O B-FOOD O O O
+60,Bị gan nhiễm mỡ nên ăn gì?,Bị gan_nhiễm_mỡ nên ăn gì ?,O B-DISEASE O O O O
+61,Loãng xương nên bổ sung gì?,Loãng_xương nên bổ_sung gì ?,B-DISEASE O O O O
+62,Người bị thiếu máu nên ăn gì?,Người bị thiếu_máu nên ăn gì ?,O O B-DISEASE O O O O
+63,Bệnh dạ dày nên tránh ăn gì?,Bệnh dạ_dày nên tránh ăn gì ?,O B-DISEASE O O O O O
+64,Ung thư cần bổ sung thực phẩm gì?,Ung_thư cần bổ_sung thực_phẩm gì ?,B-DISEASE O O O O O
+65,Bị huyết áp cao nên ăn chuối không?,Bị huyết_áp_cao nên ăn chuối không ?,O B-DISEASE O O B-FOOD O O
+66,Người bị tiểu đường có uống nước mía được không?,Người bị tiểu_đường có uống nước_mía được không ?,O O B-DISEASE O O B-FOOD O O O
+67,Bị gout nên hạn chế ăn thịt bò không?,Bị gout nên hạn_chế ăn thịt_bò không ?,O B-DISEASE O O O B-FOOD O O
+68,Người bị cholesterol cao nên ăn cá hồi không?,Người bị cholesterol_cao nên ăn cá_hồi không ?,O O B-DISEASE O O B-FOOD O O
+69,Tiểu đường tuýp 2 có ăn trái cây không?,Tiểu_đường tuýp_2 có ăn trái_cây không ?,B-DISEASE O O O O O O
+70,Bị loãng xương nên ăn thực phẩm giàu canxi nào?,Bị loãng_xương nên ăn thực_phẩm giàu canxi nào ?,O B-DISEASE O O O O B-NUTRIENT O O
+71,Người bị tim mạch nên ăn cá thay thịt không?,Người bị tim_mạch nên ăn cá thay thịt không ?,O O B-DISEASE O O B-FOOD O B-FOOD O O
+72,Bị béo phì có nên ăn khoai lang không?,Bị béo_phì có nên ăn khoai_lang không ?,O B-DISEASE O O O B-FOOD O O
+73,Người bị dạ dày có ăn cà chua không?,Người bị dạ_dày có ăn cà_chua không ?,O O B-DISEASE O O B-FOOD O O
+74,Gout kiêng ăn hải sản không?,Gout kiêng ăn hải_sản không ?,B-DISEASE O O B-FOOD O O
+75,Bị thiếu máu nên ăn thực phẩm giàu sắt nào?,Bị thiếu_máu nên ăn thực_phẩm giàu sắt nào ?,O B-DISEASE O O O O B-NUTRIENT O O
+76,Người bị gan nhiễm mỡ có ăn thịt được không?,Người bị gan_nhiễm_mỡ có ăn thịt được không ?,O O B-DISEASE O O O O O O
+77,Huyết áp cao nên ăn ít muối không?,Huyết_áp_cao nên ăn ít muối không ?,B-DISEASE O O O O O O
+78,Bị tiểu đường nên ăn rau muống không?,Bị tiểu_đường nên ăn rau_muống không ?,O B-DISEASE O O B-FOOD O O
+79,Người ung thư nên bổ sung vitamin D không?,Người ung_thư nên bổ_sung vitamin_D không ?,O B-DISEASE O O B-NUTRIENT O O
+80,Bị gout có ăn đậu phụ được không?,Bị gout có ăn đậu_phụ được không ?,O B-DISEASE O O B-FOOD O O O
+81,Người béo phì nên giảm tinh bột không?,Người béo_phì nên giảm tinh_bột không ?,O B-DISEASE O O B-NUTRIENT O O
+82,Bị cholesterol cao nên ăn yến mạch không?,Bị cholesterol_cao nên ăn yến_mạch không ?,O B-DISEASE O O B-FOOD O O
+83,Người bị tim mạch có ăn thịt heo không?,Người bị tim_mạch có ăn thịt_heo không ?,O O B-DISEASE O O B-FOOD O O
+84,Tiểu đường ăn bơ có được không?,Tiểu_đường ăn bơ có được không ?,B-DISEASE O B-FOOD O O O O
+85,Bị loãng xương nên uống sữa không?,Bị loãng_xương nên uống sữa không ?,O B-DISEASE O O B-FOOD O O
+86,Người bị dạ dày nên tránh thức ăn chua không?,Người bị dạ_dày nên tránh thức_ăn chua không ?,O O B-DISEASE O O O O O O
+87,Bị gan nhiễm mỡ nên ăn rau xanh không?,Bị gan_nhiễm_mỡ nên ăn rau_xanh không ?,O B-DISEASE O O B-FOOD O O
+88,Người thiếu máu nên ăn thịt bò hay rau muống?,Người thiếu_máu nên ăn thịt_bò hay rau_muống ?,O B-DISEASE O O B-FOOD O B-FOOD O
+89,Huyết áp cao có ăn chuối được không?,Huyết_áp_cao có ăn chuối được không ?,B-DISEASE O O B-FOOD O O O
+90,Bị tiểu đường nên hạn chế ăn gì?,Bị tiểu_đường nên hạn_chế ăn gì ?,O B-DISEASE O O O O O
+91,Người bị gout có ăn trứng gà không?,Người bị gout có ăn trứng_gà không ?,O O B-DISEASE O O B-FOOD O O
+92,Bị cholesterol cao có ăn tôm không?,Bị cholesterol_cao có ăn tôm không ?,O B-DISEASE O O B-FOOD O O
+93,Người béo phì nên ăn ức gà không?,Người béo_phì nên ăn ức_gà không ?,O B-DISEASE O O B-FOOD O O
+94,Bị ung thư nên ăn thực phẩm nào tốt?,Bị ung_thư nên ăn thực_phẩm nào tốt ?,O B-DISEASE O O O O O O
+95,Loãng xương cần bổ sung canxi từ sữa không?,Loãng_xương cần bổ_sung canxi từ sữa không ?,B-DISEASE O O B-NUTRIENT O B-FOOD O O
+96,Người bị huyết áp cao nên ăn bơ không?,Người bị huyết_áp_cao nên ăn bơ không ?,O O B-DISEASE O O B-FOOD O O
+97,Bị dạ dày có ăn chuối được không?,Bị dạ_dày có ăn chuối được không ?,O B-DISEASE O O B-FOOD O O O
+98,Gout nên hạn chế thịt heo không?,Gout nên hạn_chế thịt_heo không ?,B-DISEASE O O B-FOOD O O
+99,Bị tiểu đường có ăn bưởi không?,Bị tiểu_đường có ăn bưởi không ?,O B-DISEASE O O B-FOOD O O
+100,Người bị tim mạch nên ăn cá hồi mỗi tuần mấy lần?,Người bị tim_mạch nên ăn cá_hồi mỗi tuần mấy lần ?,O O B-DISEASE O O B-FOOD O O O O O
+101,Bị gan nhiễm mỡ nên kiêng ăn gì?,Bị gan_nhiễm_mỡ nên kiêng ăn gì ?,O B-DISEASE O O O O O
+102,Người béo phì ăn yến mạch thay cơm được không?,Người béo_phì ăn yến_mạch thay cơm được không ?,O B-DISEASE O B-FOOD O O O O O
+103,Bị loãng xương nên ăn đậu phụ không?,Bị loãng_xương nên ăn đậu_phụ không ?,O B-DISEASE O O B-FOOD O O
+104,Cholesterol cao nên ăn bơ không?,Cholesterol_cao nên ăn bơ không ?,B-DISEASE O O B-FOOD O O
+105,Người tiểu đường nên ăn khoai lang không?,Người tiểu_đường nên ăn khoai_lang không ?,O B-DISEASE O O B-FOOD O O
+106,Bị thiếu máu nên ăn rau muống không?,Bị thiếu_máu nên ăn rau_muống không ?,O B-DISEASE O O B-FOOD O O
+107,Người bị huyết áp cao nên hạn chế natri không?,Người bị huyết_áp_cao nên hạn_chế natri không ?,O O B-DISEASE O O B-NUTRIENT O O
+108,Bị gout có ăn cá thu không?,Bị gout có ăn cá_thu không ?,O B-DISEASE O O B-FOOD O O
+109,Người ung thư cần bổ sung protein nhiều không?,Người ung_thư cần bổ_sung protein nhiều không ?,O B-DISEASE O O B-NUTRIENT O O O
+110,Bị dạ dày nên ăn gạo lứt hay cơm trắng?,Bị dạ_dày nên ăn gạo_lứt hay cơm_trắng ?,O B-DISEASE O O B-FOOD O B-FOOD O
+111,Bị đau đầu nên ăn gì?,Bị đau_đầu nên ăn gì ?,O B-SYMPTOM O O O O
+112,Mệt mỏi nên bổ sung gì?,Mệt_mỏi nên bổ_sung gì ?,B-SYMPTOM O O O O
+113,Bị buồn nôn nên ăn thực phẩm gì?,Bị buồn_nôn nên ăn thực_phẩm gì ?,O B-SYMPTOM O O O O O
+114,Bị đau khớp nên ăn gì để giảm đau?,Bị đau_khớp nên ăn gì để giảm đau ?,O B-SYMPTOM O O O O O O O
+115,Mất ngủ nên ăn gì trước khi đi ngủ?,Mất_ngủ nên ăn gì trước khi đi ngủ ?,B-SYMPTOM O O O O O O O O
+116,Bị chóng mặt nên ăn gì?,Bị chóng_mặt nên ăn gì ?,O B-SYMPTOM O O O O
+117,Đau bụng nên ăn thực phẩm nhẹ nào?,Đau_bụng nên ăn thực_phẩm nhẹ nào ?,B-SYMPTOM O O O O O O
+118,Bị khó tiêu nên ăn gì?,Bị khó_tiêu nên ăn gì ?,O B-SYMPTOM O O O O
+119,Bị tiêu chảy nên ăn gì?,Bị tiêu_chảy nên ăn gì ?,O B-SYMPTOM O O O O
+120,Chuối có giúp giảm chóng mặt không?,Chuối có giúp giảm chóng_mặt không ?,B-FOOD O O O B-SYMPTOM O O
+121,Bị mệt mỏi nên bổ sung vitamin D không?,Bị mệt_mỏi nên bổ_sung vitamin_D không ?,O B-SYMPTOM O O B-NUTRIENT O O
+122,Đau khớp gối nên ăn gì để cải thiện?,Đau_khớp gối nên ăn gì để cải_thiện ?,B-SYMPTOM O O O O O O O
+123,Bị sưng khớp nên tránh ăn gì?,Bị sưng_khớp nên tránh ăn gì ?,O B-SYMPTOM O O O O O
+124,Mất ngủ uống sữa ấm có hiệu quả không?,Mất_ngủ uống sữa ấm có hiệu_quả không ?,B-SYMPTOM O B-FOOD O O O O O
+125,Bị đau đầu nên uống nước nhiều không?,Bị đau_đầu nên uống nước nhiều không ?,O B-SYMPTOM O O O O O O
+126,Khó tiêu ăn sữa chua có giúp tiêu hoá không?,Khó_tiêu ăn sữa_chua có giúp tiêu_hoá không ?,B-SYMPTOM O B-FOOD O O O O O
+127,Bị tiêu chảy nên ăn cháo không?,Bị tiêu_chảy nên ăn cháo không ?,O B-SYMPTOM O O B-FOOD O O
+128,Mệt mỏi thường xuyên có thể thiếu sắt không?,Mệt_mỏi thường_xuyên có_thể thiếu sắt không ?,B-SYMPTOM O O O B-NUTRIENT O O
+129,Bị buồn nôn sau khi ăn thịt heo thì sao?,Bị buồn_nôn sau khi ăn thịt_heo thì sao ?,O B-SYMPTOM O O O B-FOOD O O O
+130,Đau bụng sau ăn cà chua có bình thường không?,Đau_bụng sau ăn cà_chua có bình_thường không ?,B-SYMPTOM O O B-FOOD O O O O
+131,Chóng mặt do thiếu sắt nên ăn gì?,Chóng_mặt do thiếu sắt nên ăn gì ?,B-SYMPTOM O O B-NUTRIENT O O O O
+132,Bị sưng khớp ăn cá hồi có giảm viêm không?,Bị sưng_khớp ăn cá_hồi có giảm viêm không ?,O B-SYMPTOM O B-FOOD O O O O O
+133,Mệt mỏi sau tập thể thao nên bổ sung protein không?,Mệt_mỏi sau tập_thể_thao nên bổ_sung protein không ?,B-SYMPTOM O O O O B-NUTRIENT O O
+134,Bị khó tiêu ăn đậu phụ có được không?,Bị khó_tiêu ăn đậu_phụ có được không ?,O B-SYMPTOM O B-FOOD O O O O
+135,Đau đầu do thiếu magiê nên ăn gì?,Đau_đầu do thiếu magiê nên ăn gì ?,B-SYMPTOM O O B-NUTRIENT O O O O
+136,Bị mất ngủ có nên ăn bơ không?,Bị mất_ngủ có nên ăn bơ không ?,O B-SYMPTOM O O O B-FOOD O O
+137,Tiêu chảy nên uống nhiều nước và ăn gì?,Tiêu_chảy nên uống nhiều nước và ăn gì ?,B-SYMPTOM O O O O O O O O
+138,Bị đau khớp do gout nên tránh thức ăn gì?,Bị đau_khớp do gout nên tránh thức_ăn gì ?,O B-SYMPTOM O B-DISEASE O O O O O
+139,Chóng mặt sau khi đứng dậy nên bổ sung kali không?,Chóng_mặt sau khi đứng_dậy nên bổ_sung kali không ?,B-SYMPTOM O O O O O B-NUTRIENT O O
+140,Bị khó thở nên hạn chế ăn gì?,Bị khó_thở nên hạn_chế ăn gì ?,O B-SYMPTOM O O O O O
+141,Mệt mỏi nên uống sữa không?,Mệt_mỏi nên uống sữa không ?,B-SYMPTOM O O B-FOOD O O
+142,Bị buồn nôn khi ăn sáng thì làm gì?,Bị buồn_nôn khi ăn sáng thì làm gì ?,O B-SYMPTOM O O O O O O O
+143,Đau bụng có nên ăn chuối không?,Đau_bụng có nên ăn chuối không ?,B-SYMPTOM O O O B-FOOD O O
+144,Bị tiêu chảy ăn gạo lứt được không?,Bị tiêu_chảy ăn gạo_lứt được không ?,O B-SYMPTOM O B-FOOD O O O
+145,Mất ngủ do thiếu magiê nên ăn gì?,Mất_ngủ do thiếu magiê nên ăn gì ?,B-SYMPTOM O O B-NUTRIENT O O O O
+146,Bị sưng khớp có liên quan đến chế độ ăn không?,Bị sưng_khớp có liên_quan đến chế_độ_ăn không ?,O B-SYMPTOM O O O O O O
+147,Chóng mặt ăn óc chó có giúp không?,Chóng_mặt ăn óc_chó có giúp không ?,B-SYMPTOM O B-FOOD O O O O
+148,Bị đau đầu nên tránh ăn gì?,Bị đau_đầu nên tránh ăn gì ?,O B-SYMPTOM O O O O O
+149,Khó tiêu sau ăn thịt heo nên làm gì?,Khó_tiêu sau ăn thịt_heo nên làm gì ?,B-SYMPTOM O O B-FOOD O O O O
+150,Bị mệt mỏi nên ăn thực phẩm giàu sắt không?,Bị mệt_mỏi nên ăn thực_phẩm giàu sắt không ?,O B-SYMPTOM O O O O B-NUTRIENT O O
+151,Người bị tiểu đường ăn cá hồi có bổ sung được omega-3 không?,Người bị tiểu_đường ăn cá_hồi có bổ_sung được omega-3 không ?,O O B-DISEASE O B-FOOD O O O B-NUTRIENT O O
+152,Bị gout và huyết áp cao nên ăn gì?,Bị gout và huyết_áp_cao nên ăn gì ?,O B-DISEASE O B-DISEASE O O O O
+153,Mệt mỏi do thiếu sắt nên ăn rau muống không?,Mệt_mỏi do thiếu sắt nên ăn rau_muống không ?,B-SYMPTOM O O B-NUTRIENT O O B-FOOD O O
+154,Người bị tiểu đường bị đau đầu nên ăn gì?,Người bị tiểu_đường bị đau_đầu nên ăn gì ?,O O B-DISEASE O B-SYMPTOM O O O O
+155,Bị cholesterol cao ăn bơ giàu chất béo có ổn không?,Bị cholesterol_cao ăn bơ giàu chất_béo có ổn không ?,O B-DISEASE O B-FOOD O B-NUTRIENT O O O O
+156,Người loãng xương cần canxi và vitamin D nên ăn gì?,Người loãng_xương cần canxi và vitamin_D nên ăn gì ?,O B-DISEASE O B-NUTRIENT O B-NUTRIENT O O O O
+157,Bị thiếu máu và mệt mỏi nên bổ sung sắt từ đâu?,Bị thiếu_máu và mệt_mỏi nên bổ_sung sắt từ đâu ?,O B-DISEASE O B-SYMPTOM O O B-NUTRIENT O O O
+158,Cá hồi giàu omega-3 tốt cho người bị tim mạch không?,Cá_hồi giàu omega-3 tốt cho người bị tim_mạch không ?,B-FOOD O B-NUTRIENT O O O O B-DISEASE O O
+159,Ăn ức gà sau tập thể thao có bổ sung protein tốt không?,Ăn ức_gà sau tập_thể_thao có bổ_sung protein tốt không ?,O B-FOOD O O O O B-NUTRIENT O O O
+160,Bị tiểu đường mệt mỏi nên bổ sung gì?,Bị tiểu_đường mệt_mỏi nên bổ_sung gì ?,O B-DISEASE B-SYMPTOM O O O O
+161,Người béo phì bị đau khớp nên ăn gì?,Người béo_phì bị đau_khớp nên ăn gì ?,O B-DISEASE O B-SYMPTOM O O O O
+162,Gạo lứt giàu chất xơ có tốt cho người tiểu đường không?,Gạo_lứt giàu chất_xơ có tốt cho người tiểu_đường không ?,B-FOOD O B-NUTRIENT O O O O B-DISEASE O O
+163,Bị gout đau khớp nên tránh ăn thịt bò không?,Bị gout đau_khớp nên tránh ăn thịt_bò không ?,O B-DISEASE B-SYMPTOM O O O B-FOOD O O
+164,Người bị huyết áp cao và chóng mặt nên ăn gì?,Người bị huyết_áp_cao và chóng_mặt nên ăn gì ?,O O B-DISEASE O B-SYMPTOM O O O O
+165,Sữa chua chứa canxi tốt cho người bị loãng xương không?,Sữa_chua chứa canxi tốt cho người bị loãng_xương không ?,B-FOOD O B-NUTRIENT O O O O B-DISEASE O O
+166,Bị tiểu đường ăn chuối nhiều kali có ổn không?,Bị tiểu_đường ăn chuối nhiều kali có ổn không ?,O B-DISEASE O B-FOOD O B-NUTRIENT O O O O
+167,Người bị tim mạch mệt mỏi nên ăn cá hồi không?,Người bị tim_mạch mệt_mỏi nên ăn cá_hồi không ?,O O B-DISEASE B-SYMPTOM O O B-FOOD O O
+168,Bị huyết áp cao đau đầu nên ăn thực phẩm gì?,Bị huyết_áp_cao đau_đầu nên ăn thực_phẩm gì ?,O B-DISEASE B-SYMPTOM O O O O O
+169,Rau muống giàu sắt tốt cho người bị thiếu máu không?,Rau_muống giàu sắt tốt cho người bị thiếu_máu không ?,B-FOOD O B-NUTRIENT O O O O B-DISEASE O O
+170,Người bị gout bị đau khớp nên tránh thịt heo không?,Người bị gout bị đau_khớp nên tránh thịt_heo không ?,O O B-DISEASE O B-SYMPTOM O O B-FOOD O O
+171,Yến mạch giàu chất xơ có giúp người béo phì giảm cân không?,Yến_mạch giàu chất_xơ có giúp người béo_phì giảm_cân không ?,B-FOOD O B-NUTRIENT O O O B-DISEASE O O O
+172,Bị dạ dày khó tiêu nên ăn đậu phụ không?,Bị dạ_dày khó_tiêu nên ăn đậu_phụ không ?,O B-DISEASE B-SYMPTOM O O B-FOOD O O
+173,Người ung thư cần protein nhiều nên ăn ức gà không?,Người ung_thư cần protein nhiều nên ăn ức_gà không ?,O B-DISEASE O B-NUTRIENT O O O B-FOOD O O
+174,Bị tiểu đường mất ngủ nên ăn gì?,Bị tiểu_đường mất_ngủ nên ăn gì ?,O B-DISEASE B-SYMPTOM O O O O
+175,Cà rốt giàu vitamin D tốt cho người bị loãng xương không?,Cà_rốt giàu vitamin_D tốt cho người bị loãng_xương không ?,B-FOOD O B-NUTRIENT O O O O B-DISEASE O O
+176,Bị thiếu máu chóng mặt nên bổ sung sắt từ thực phẩm nào?,Bị thiếu_máu chóng_mặt nên bổ_sung sắt từ thực_phẩm nào ?,O B-DISEASE B-SYMPTOM O O B-NUTRIENT O O O O
+177,Người bị gan nhiễm mỡ ăn óc chó có giảm chất béo không?,Người bị gan_nhiễm_mỡ ăn óc_chó có giảm chất_béo không ?,O O B-DISEASE O B-FOOD O O B-NUTRIENT O O
+178,Bị gout uống nước mía có làm tăng acid uric không?,Bị gout uống nước_mía có làm tăng acid_uric không ?,O B-DISEASE O B-FOOD O O O O O O
+179,Ăn trứng gà có làm tăng cholesterol cao không?,Ăn trứng_gà có làm tăng cholesterol_cao không ?,O B-FOOD O O O B-DISEASE O O
+180,Người bị tiểu đường buồn nôn nên ăn gì?,Người bị tiểu_đường buồn_nôn nên ăn gì ?,O O B-DISEASE B-SYMPTOM O O O O
+181,Khoai lang giàu tinh bột người tiểu đường ăn được không?,Khoai_lang giàu tinh_bột người tiểu_đường ăn được không ?,B-FOOD O B-NUTRIENT O B-DISEASE O O O O
+182,Người bị huyết áp cao nên ăn chuối giàu kali không?,Người bị huyết_áp_cao nên ăn chuối giàu kali không ?,O O B-DISEASE O O B-FOOD O B-NUTRIENT O O
+183,Bị loãng xương mệt mỏi nên bổ sung vitamin D từ đâu?,Bị loãng_xương mệt_mỏi nên bổ_sung vitamin_D từ đâu ?,O B-DISEASE B-SYMPTOM O O B-NUTRIENT O O O
+184,Người bị tim mạch ăn tôm giàu protein có ổn không?,Người bị tim_mạch ăn tôm giàu protein có ổn không ?,O O B-DISEASE O B-FOOD O B-NUTRIENT O O O O
+185,Bị béo phì đau khớp nên ăn thực phẩm gì để giảm cân?,Bị béo_phì đau_khớp nên ăn thực_phẩm gì để giảm_cân ?,O B-DISEASE B-SYMPTOM O O O O O O O
+186,Người bị dạ dày không tiêu nên ăn gạo lứt không?,Người bị dạ_dày không_tiêu nên ăn gạo_lứt không ?,O O B-DISEASE B-SYMPTOM O O B-FOOD O O
+187,Bị tiểu đường ăn cá thu giàu omega-3 có tốt không?,Bị tiểu_đường ăn cá_thu giàu omega-3 có tốt không ?,O B-DISEASE O B-FOOD O B-NUTRIENT O O O O
+188,Mệt mỏi do thiếu kẽm nên ăn hạt điều không?,Mệt_mỏi do thiếu kẽm nên ăn hạt_điều không ?,B-SYMPTOM O O B-NUTRIENT O O B-FOOD O O
+189,Bị gout chóng mặt có liên quan đến chế độ ăn không?,Bị gout chóng_mặt có liên_quan đến chế_độ_ăn không ?,O B-DISEASE B-SYMPTOM O O O O O O
+190,Người ung thư mệt mỏi nên bổ sung protein từ đậu phụ không?,Người ung_thư mệt_mỏi nên bổ_sung protein từ đậu_phụ không ?,O B-DISEASE B-SYMPTOM O O B-NUTRIENT O B-FOOD O O
+191,Bơ giàu chất béo lành mạnh tốt cho người bị tim mạch không?,Bơ giàu chất_béo lành_mạnh tốt cho người bị tim_mạch không ?,B-FOOD O B-NUTRIENT O O O O O B-DISEASE O O
+192,Bị cholesterol cao đau đầu nên ăn cá hồi không?,Bị cholesterol_cao đau_đầu nên ăn cá_hồi không ?,O B-DISEASE B-SYMPTOM O O B-FOOD O O
+193,Người bị thiếu máu nên ăn thịt bò và rau muống không?,Người bị thiếu_máu nên ăn thịt_bò và rau_muống không ?,O O B-DISEASE O O B-FOOD O B-FOOD O O
+194,Bị huyết áp cao ăn gạo lứt và rau xanh có tốt không?,Bị huyết_áp_cao ăn gạo_lứt và rau_xanh có tốt không ?,O B-DISEASE O B-FOOD O B-FOOD O O O O
+195,Người bị gout và tiểu đường nên ăn gì?,Người bị gout và tiểu_đường nên ăn gì ?,O O B-DISEASE O B-DISEASE O O O O
+196,Mất ngủ do thiếu magiê ăn hạt điều có giúp không?,Mất_ngủ do thiếu magiê ăn hạt_điều có giúp không ?,B-SYMPTOM O O B-NUTRIENT O B-FOOD O O O O
+197,Bị tiểu đường ăn đậu xanh giàu protein có ổn không?,Bị tiểu_đường ăn đậu_xanh giàu protein có ổn không ?,O B-DISEASE O B-FOOD O B-NUTRIENT O O O O
+198,Người bị loãng xương ăn sữa chua và trứng gà có tốt không?,Người bị loãng_xương ăn sữa_chua và trứng_gà có tốt không ?,O O B-DISEASE O B-FOOD O B-FOOD O O O O
+199,Bị gan nhiễm mỡ chóng mặt nên bổ sung thực phẩm gì?,Bị gan_nhiễm_mỡ chóng_mặt nên bổ_sung thực_phẩm gì ?,O B-DISEASE B-SYMPTOM O O O O O
+200,Người bị huyết áp cao và béo phì nên ăn gạo lứt và rau xanh không?,Người bị huyết_áp_cao và béo_phì nên ăn gạo_lứt và rau_xanh không ?,O O B-DISEASE O B-DISEASE O O B-FOOD O O O O
+201,Muốn giảm cân nên ăn gì?,Muốn giảm_cân nên ăn gì ?,O O O O O O
+202,Ăn gì để tăng cân lành mạnh?,Ăn gì để tăng_cân lành_mạnh ?,O O O O O O
+203,Giảm cân có nên bỏ tinh bột không?,Giảm_cân có nên bỏ tinh_bột không ?,O O O O B-NUTRIENT O O
+204,Ức gà giúp giảm cân hiệu quả không?,Ức_gà giúp giảm_cân hiệu_quả không ?,B-FOOD O O O O O
+205,Người muốn giảm cân nên hạn chế chất béo không?,Người muốn giảm_cân nên hạn_chế chất_béo không ?,O O O O O B-NUTRIENT O O
+206,Gạo lứt tốt cho người đang giảm cân không?,Gạo_lứt tốt cho người đang giảm_cân không ?,B-FOOD O O O O O O O
+207,Ăn bơ có béo không khi đang giảm cân?,Ăn bơ có béo không khi đang giảm_cân ?,O B-FOOD O O O O O O O
+208,Muốn tăng cân nên ăn thực phẩm giàu protein nào?,Muốn tăng_cân nên ăn thực_phẩm giàu protein nào ?,O O O O O O B-NUTRIENT O O
+209,Khoai lang giúp tăng cân lành mạnh không?,Khoai_lang giúp tăng_cân lành_mạnh không ?,B-FOOD O O O O O
+210,Yến mạch có phù hợp cho người muốn giảm cân không?,Yến_mạch có phù_hợp cho người muốn giảm_cân không ?,B-FOOD O O O O O O O O
+211,Giảm cân nên bổ sung chất xơ từ thực phẩm nào?,Giảm_cân nên bổ_sung chất_xơ từ thực_phẩm nào ?,O O O B-NUTRIENT O O O O
+212,Bắp cải có giúp giảm cân không?,Bắp_cải có giúp giảm_cân không ?,B-FOOD O O O O O
+213,Người tăng cân nên ăn nhiều calo từ thực phẩm nào?,Người tăng_cân nên ăn nhiều calo từ thực_phẩm nào ?,O O O O O B-NUTRIENT O O O O
+214,Ăn chay có giúp giảm cân không?,Ăn_chay có giúp giảm_cân không ?,O O O O O O
+215,Hạt điều giúp tăng cân không?,Hạt_điều giúp tăng_cân không ?,B-FOOD O O O O
+216,Bưởi có tác dụng giảm cân không?,Bưởi có tác_dụng giảm_cân không ?,B-FOOD O O O O O
+217,Giảm cân nên ăn ức gà thay thịt heo không?,Giảm_cân nên ăn ức_gà thay thịt_heo không ?,O O O B-FOOD O B-FOOD O O
+218,Đậu phụ tốt cho người đang giảm cân không?,Đậu_phụ tốt cho người đang giảm_cân không ?,B-FOOD O O O O O O O
+219,Rau chân vịt giúp giảm cân và bổ sung sắt không?,Rau_chân_vịt giúp giảm_cân và bổ_sung sắt không ?,B-FOOD O O O O B-NUTRIENT O O
+220,Người giảm cân nên bổ sung protein từ đậu xanh không?,Người giảm_cân nên bổ_sung protein từ đậu_xanh không ?,O O O O B-NUTRIENT O B-FOOD O O
+221,Bà bầu 3 tháng đầu nên bổ sung gì?,Bà_bầu 3_tháng_đầu nên bổ_sung gì ?,O O O O O O
+222,Phụ nữ mang thai cần bổ sung folate không?,Phụ_nữ mang_thai cần bổ_sung folate không ?,O O O O B-NUTRIENT O O
+223,Bà bầu nên ăn thực phẩm giàu sắt nào?,Bà_bầu nên ăn thực_phẩm giàu sắt nào ?,O O O O O B-NUTRIENT O O
+224,Trẻ em cần bao nhiêu canxi mỗi ngày?,Trẻ_em cần bao_nhiêu canxi mỗi ngày ?,O O O B-NUTRIENT O O O
+225,Người cao tuổi nên ăn gì để khỏe xương?,Người cao_tuổi nên ăn gì để khỏe xương ?,O O O O O O O O O
+226,Bà bầu ăn trứng gà được không?,Bà_bầu ăn trứng_gà được không ?,O O B-FOOD O O O
+227,Trẻ em cần bổ sung vitamin D từ thực phẩm nào?,Trẻ_em cần bổ_sung vitamin_D từ thực_phẩm nào ?,O O O B-NUTRIENT O O O O
+228,Bà bầu 3 tháng cuối nên ăn nhiều protein không?,Bà_bầu 3_tháng_cuối nên ăn nhiều protein không ?,O O O O O B-NUTRIENT O O
+229,Người già bị loãng xương nên uống sữa không?,Người già bị loãng_xương nên uống sữa không ?,O O O B-DISEASE O O B-FOOD O O
+230,Trẻ em biếng ăn nên bổ sung kẽm không?,Trẻ_em biếng_ăn nên bổ_sung kẽm không ?,O O O O B-NUTRIENT O O
+231,Bà bầu thiếu máu nên ăn thịt bò không?,Bà_bầu thiếu_máu nên ăn thịt_bò không ?,O B-DISEASE O O B-FOOD O O
+232,Trẻ nhỏ cần vitamin B12 từ thực phẩm nào?,Trẻ_nhỏ cần vitamin_B12 từ thực_phẩm nào ?,O O B-NUTRIENT O O O O
+233,Người già nên ăn cá hồi để bổ sung omega-3 không?,Người già nên ăn cá_hồi để bổ_sung omega-3 không ?,O O O O B-FOOD O O B-NUTRIENT O O
+234,Bà bầu nên ăn rau chân vịt giàu folate không?,Bà_bầu nên ăn rau_chân_vịt giàu folate không ?,O O O B-FOOD O B-NUTRIENT O O
+235,Trẻ em thiếu canxi có nên uống sữa không?,Trẻ_em thiếu canxi có nên uống sữa không ?,O O B-NUTRIENT O O O B-FOOD O O
+236,Người cao tuổi bị táo bón nên ăn gì?,Người cao_tuổi bị táo_bón nên ăn gì ?,O O O B-SYMPTOM O O O O
+237,Bà bầu bị ợ nóng nên tránh ăn gì?,Bà_bầu bị ợ_nóng nên tránh ăn gì ?,O O B-SYMPTOM O O O O O
+238,Trẻ em cần acid folic từ thực phẩm nào?,Trẻ_em cần acid_folic từ thực_phẩm nào ?,O O B-NUTRIENT O O O O
+239,Người già nên ăn đậu phụ giàu canxi không?,Người già nên ăn đậu_phụ giàu canxi không ?,O O O O B-FOOD O B-NUTRIENT O O
+240,Bà bầu nên bổ sung vitamin D từ cá hồi không?,Bà_bầu nên bổ_sung vitamin_D từ cá_hồi không ?,O O O B-NUTRIENT O B-FOOD O O
+241,Sau tập gym nên ăn gì để tăng cơ?,Sau tập_gym nên ăn gì để tăng_cơ ?,O O O O O O O O
+242,Trước khi chạy bộ nên ăn gì?,Trước khi chạy_bộ nên ăn gì ?,O O O O O O O
+243,Ăn bao nhiêu protein mỗi ngày để tăng cơ?,Ăn bao_nhiêu protein mỗi ngày để tăng_cơ ?,O O B-NUTRIENT O O O O O
+244,Sau tập thể thao nên ăn ức gà không?,Sau tập_thể_thao nên ăn ức_gà không ?,O O O O B-FOOD O O
+245,Tập gym cần bổ sung creatine không?,Tập_gym cần bổ_sung creatine không ?,O O O B-NUTRIENT O O
+246,Trước khi tập gym nên ăn khoai lang không?,Trước khi tập_gym nên ăn khoai_lang không ?,O O O O O B-FOOD O O
+247,Người tập gym cần bao nhiêu calo mỗi ngày?,Người tập_gym cần bao_nhiêu calo mỗi ngày ?,O O O O B-NUTRIENT O O O
+248,Sau chạy bộ bị chuột rút nên bổ sung gì?,Sau chạy_bộ bị chuột_rút nên bổ_sung gì ?,O O O B-SYMPTOM O O O O
+249,Tập thể thao cần bổ sung vitamin D không?,Tập_thể_thao cần bổ_sung vitamin_D không ?,O O O B-NUTRIENT O O
+250,Ăn yến mạch trước khi tập gym có tốt không?,Ăn yến_mạch trước khi tập_gym có tốt không ?,O B-FOOD O O O O O O O
+251,Người tập gym bị đau cơ nên ăn gì?,Người tập_gym bị đau_cơ nên ăn gì ?,O O O B-SYMPTOM O O O O
+252,Cá hồi giúp phục hồi cơ sau tập luyện không?,Cá_hồi giúp phục_hồi cơ sau tập_luyện không ?,B-FOOD O O O O O O O
+253,Tập gym nên ăn trứng gà để bổ sung protein không?,Tập_gym nên ăn trứng_gà để bổ_sung protein không ?,O O O B-FOOD O O B-NUTRIENT O O
+254,Sau tập nặng bị mệt mỏi nên uống gì?,Sau tập_nặng bị mệt_mỏi nên uống gì ?,O O O B-SYMPTOM O O O O
+255,Người chạy bộ cần bổ sung kali từ chuối không?,Người chạy_bộ cần bổ_sung kali từ chuối không ?,O O O O B-NUTRIENT O B-FOOD O O
+256,Tập gym có cần uống sữa protein không?,Tập_gym có cần uống sữa_protein không ?,O O O O B-FOOD O O
+257,Hạt hạnh nhân tốt cho người tập thể thao không?,Hạt_hạnh_nhân tốt cho người tập_thể_thao không ?,B-FOOD O O O O O O
+258,Sau tập gym bị chuột rút thiếu kali nên ăn gì?,Sau tập_gym bị chuột_rút thiếu kali nên ăn gì ?,O O O B-SYMPTOM O B-NUTRIENT O O O O
+259,Tập thể thao cần ăn bao nhiêu chất xơ?,Tập_thể_thao cần ăn bao_nhiêu chất_xơ ?,O O O O B-NUTRIENT O
+260,Bơ giàu chất béo tốt cho người tập gym không?,Bơ giàu chất_béo tốt cho người tập_gym không ?,B-FOOD O B-NUTRIENT O O O O O O
+261,Ăn chay có đủ protein không?,Ăn_chay có đủ protein không ?,O O O B-NUTRIENT O O
+262,Người ăn chay nên bổ sung vitamin B12 từ đâu?,Người ăn_chay nên bổ_sung vitamin_B12 từ đâu ?,O O O O B-NUTRIENT O O O
+263,Người dị ứng hải sản bổ sung omega-3 từ đâu?,Người dị_ứng hải_sản bổ_sung omega-3 từ đâu ?,O O B-FOOD O B-NUTRIENT O O O
+264,Ăn keto có tốt không?,Ăn_keto có tốt không ?,O O O O O
+265,Ăn chay nên ăn đậu phụ để bổ sung protein không?,Ăn_chay nên ăn đậu_phụ để bổ_sung protein không ?,O O O B-FOOD O O B-NUTRIENT O O
+266,Người ăn chay thiếu sắt nên ăn gì?,Người ăn_chay thiếu sắt nên ăn gì ?,O O O B-NUTRIENT O O O O
+267,Ăn chay có thiếu canxi không?,Ăn_chay có thiếu canxi không ?,O O O B-NUTRIENT O O
+268,Người dị ứng sữa bổ sung canxi từ đâu?,Người dị_ứng sữa bổ_sung canxi từ đâu ?,O O B-FOOD O B-NUTRIENT O O O
+269,Ăn chay nên ăn đậu lăng giàu protein không?,Ăn_chay nên ăn đậu_lăng giàu protein không ?,O O O B-FOOD O B-NUTRIENT O O
+270,Chế độ keto cần hạn chế tinh bột không?,Chế_độ_keto cần hạn_chế tinh_bột không ?,O O O B-NUTRIENT O O
+271,Người ăn chay bị thiếu máu nên bổ sung gì?,Người ăn_chay bị thiếu_máu nên bổ_sung gì ?,O O O B-DISEASE O O O O
+272,Ăn chay có thiếu omega-3 không?,Ăn_chay có thiếu omega-3 không ?,O O O B-NUTRIENT O O
+273,Người dị ứng gluten nên ăn gạo lứt không?,Người dị_ứng gluten nên ăn gạo_lứt không ?,O O O O O B-FOOD O O
+274,Ăn thuần chay cần bổ sung vitamin B12 không?,Ăn_thuần_chay cần bổ_sung vitamin_B12 không ?,O O O B-NUTRIENT O O
+275,Người ăn chay tập gym thiếu protein nên ăn gì?,Người ăn_chay tập_gym thiếu protein nên ăn gì ?,O O O O B-NUTRIENT O O O O
+276,Đậu xanh tốt cho người ăn chay thiếu sắt không?,Đậu_xanh tốt cho người ăn_chay thiếu sắt không ?,B-FOOD O O O O O B-NUTRIENT O O
+277,Ăn chay nên bổ sung kẽm từ hạt điều không?,Ăn_chay nên bổ_sung kẽm từ hạt_điều không ?,O O O B-NUTRIENT O B-FOOD O O
+278,Người ăn chay bị mệt mỏi có thể thiếu vitamin B12 không?,Người ăn_chay bị mệt_mỏi có_thể thiếu vitamin_B12 không ?,O O O B-SYMPTOM O O B-NUTRIENT O O
+279,Hạt chia tốt cho người ăn chay thiếu omega-3 không?,Hạt_chia tốt cho người ăn_chay thiếu omega-3 không ?,B-FOOD O O O O O B-NUTRIENT O O
+280,Bông cải xanh giàu canxi tốt cho người ăn chay không?,Bông_cải_xanh giàu canxi tốt cho người ăn_chay không ?,B-FOOD O B-NUTRIENT O O O O O O
+281,Người tiểu đường muốn giảm cân nên ăn gì?,Người tiểu_đường muốn giảm_cân nên ăn gì ?,O B-DISEASE O O O O O O
+282,Bà bầu bị thiếu máu nên bổ sung sắt từ thực phẩm nào?,Bà_bầu bị thiếu_máu nên bổ_sung sắt từ thực_phẩm nào ?,O O B-DISEASE O O B-NUTRIENT O O O O
+283,Sau tập gym bị đau cơ nên ăn gì để phục hồi?,Sau tập_gym bị đau_cơ nên ăn gì để phục_hồi ?,O O O B-SYMPTOM O O O O O O
+284,Người ăn chay bị loãng xương nên bổ sung canxi từ đâu?,Người ăn_chay bị loãng_xương nên bổ_sung canxi từ đâu ?,O O O B-DISEASE O O B-NUTRIENT O O O
+285,Bà bầu tập thể dục nhẹ cần bổ sung gì?,Bà_bầu tập_thể_dục nhẹ cần bổ_sung gì ?,O O O O O O O
+286,Người tiểu đường tập gym cần ăn gì trước khi tập?,Người tiểu_đường tập_gym cần ăn gì trước khi tập ?,O B-DISEASE O O O O O O O O
+287,Người ăn chay muốn tăng cơ cần bổ sung protein từ đâu?,Người ăn_chay muốn tăng_cơ cần bổ_sung protein từ đâu ?,O O O O O O B-NUTRIENT O O O
+288,Bà bầu bị ợ nóng và thiếu sắt nên ăn gì?,Bà_bầu bị ợ_nóng và thiếu sắt nên ăn gì ?,O O B-SYMPTOM O O B-NUTRIENT O O O O
+289,Người cao tuổi bị loãng xương muốn tập thể dục nhẹ cần ăn gì?,Người cao_tuổi bị loãng_xương muốn tập_thể_dục nhẹ cần ăn gì ?,O O O B-DISEASE O O O O O O O
+290,Sau tập gym bị chuột rút và mệt mỏi nên bổ sung gì?,Sau tập_gym bị chuột_rút và mệt_mỏi nên bổ_sung gì ?,O O O B-SYMPTOM O B-SYMPTOM O O O O
+291,Người tiểu đường ăn chay nên bổ sung protein từ đậu lăng không?,Người tiểu_đường ăn_chay nên bổ_sung protein từ đậu_lăng không ?,O B-DISEASE O O O B-NUTRIENT O B-FOOD O O
+292,Bà bầu bị huyết áp cao nên ăn gì?,Bà_bầu bị huyết_áp_cao nên ăn gì ?,O O B-DISEASE O O O O
+293,Người tập gym bị gout nên ăn gì để tăng cơ?,Người tập_gym bị gout nên ăn gì để tăng_cơ ?,O O O B-DISEASE O O O O O O
+294,Trẻ em béo phì cần giảm tinh bột không?,Trẻ_em béo_phì cần giảm tinh_bột không ?,O B-DISEASE O O B-NUTRIENT O O
+295,Người cao tuổi ăn chay thiếu vitamin B12 nên bổ sung từ đâu?,Người cao_tuổi ăn_chay thiếu vitamin_B12 nên bổ_sung từ đâu ?,O O O O B-NUTRIENT O O O O O
+296,Bà bầu bị tiểu đường nên ăn gạo lứt không?,Bà_bầu bị tiểu_đường nên ăn gạo_lứt không ?,O O B-DISEASE O O B-FOOD O O
+297,Người tập gym muốn giảm cân nên ăn ức gà không?,Người tập_gym muốn giảm_cân nên ăn ức_gà không ?,O O O O O O B-FOOD O O
+298,Sau tập gym bị đau cơ thiếu protein nên ăn cá hồi không?,Sau tập_gym bị đau_cơ thiếu protein nên ăn cá_hồi không ?,O O O B-SYMPTOM O B-NUTRIENT O O B-FOOD O O
+299,Trẻ em ăn chay thiếu canxi và vitamin D nên bổ sung gì?,Trẻ_em ăn_chay thiếu canxi và vitamin_D nên bổ_sung gì ?,O O O B-NUTRIENT O B-NUTRIENT O O O O
+300,Người tiểu đường muốn tập gym cần bổ sung protein từ đậu phụ không?,Người tiểu_đường muốn tập_gym cần bổ_sung protein từ đậu_phụ không ?,O B-DISEASE O O O O B-NUTRIENT O B-FOOD O O

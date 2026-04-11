@@ -1,0 +1,19 @@
+# Core pipeline
+pyyaml
+requests
+
+# NLP / preprocessing
+underthesea
+
+# Vector search
+chromadb
+sentence-transformers
+rank-bm25
+
+# Data
+pandas
+
+scikit-learn
+
+# UI (optional — chỉ cần nếu dùng Streamlit thay Spring Boot)
+streamlit

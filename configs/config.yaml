@@ -6,6 +6,7 @@
 sqlite_path: "data/usda_food.db"
 vi_mapping_path: "data/vi_food_mapping.csv"
 medical_docs_path: "data/medical_knowledge.jsonl"
+raw_articles_path: "data/raw/articles"
 
 chroma_persist_dir: "data/chroma_db"
 chroma_collection: "health_articles"
@@ -14,7 +15,7 @@ ner_model_path: "models/ner_phobert/"
 
 # --- Models ---
 embedding_model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-llm_model: "vistral"     # vistral | qwen2.5:3b | phogpt
+llm_model: "llama3.1:8b"  # llama3.1:8b | qwen2.5:3b | mistral:7b
 llm_backend: "ollama"   # ollama | huggingface
 
 # --- Retrieval ---
