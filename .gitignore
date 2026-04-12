@@ -26,7 +26,10 @@ Thumbs.db
 *.pdf
 
 # Maven build output
-Interface/chatbot/target/
+chatbot/target/
+
+# H2 database files (runtime data)
+chatbot/data/
 
 # Env
 .env
@@ -34,13 +37,11 @@ Interface/chatbot/target/
 # Internal docs (not for repo)
 food_doc/
 
-# Embedded git repos (manage separately)
-chatbot/
-
 # Vector DB — tự sinh lại khi chạy pipeline lần đầu
 # Rebuild: python -m src.data_pipeline.embed_articles
 data/chroma_db/
 data/.embedded_manifest.json
+src/data/
 
 # NER model weights (~500MB)
 # Cách lấy: fine-tune bằng notebooks/phobert_ner_finetune.ipynb (Colab) rồi giải nén vào models/ner_phobert/

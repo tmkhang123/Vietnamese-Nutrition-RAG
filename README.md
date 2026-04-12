@@ -41,11 +41,12 @@ Ollama llama3.1:8b → câu trả lời
 │   ├── generation/     # generator (Ollama)
 │   └── data_pipeline/  # embedder, chunker, crawler
 ├── main/
-│   └── rag_cli.py      # JSON bridge cho Spring Boot
+│   ├── rag_server.py   # FastAPI server (port 8000) — load model 1 lần, serve nhiều request
+│   └── rag_cli.py      # CLI bridge (legacy)
 ├── notebooks/
 │   ├── eval_7_groups.ipynb          # đánh giá 7 nhóm câu hỏi (chạy local)
 │   └── phobert_ner_finetune.ipynb   # fine-tune PhoBERT NER (chạy trên Colab)
-├── Interface/chatbot/  # Spring Boot UI (port 8081)
+├── chatbot/            # Spring Boot UI (port 8081)
 ├── data/
 │   ├── usda_food.db         # USDA SQLite
 │   ├── vi_food_mapping.csv  # mapping tên Việt → USDA
@@ -116,9 +117,9 @@ Notebook này fine-tune `vinai/phobert-base` để nhận diện thực thể FO
 
 ---
 
-## Chạy web (Spring Boot)
+## Chạy web (Spring Boot + FastAPI)
 
-**Yêu cầu:** JDK 21+, Maven
+**Yêu cầu:** JDK 21+, Maven, Python environment đã cài
 
 **Bước 1** — đảm bảo Ollama đang chạy:
 
@@ -126,10 +127,17 @@ Notebook này fine-tune `vinai/phobert-base` để nhận diện thực thể FO
 ollama serve
 ```
 
-**Bước 2** — chạy Spring Boot:
+**Bước 2** — khởi động FastAPI server (load model 1 lần):
 
 ```bash
-cd Interface/chatbot
+conda activate nutrition-rag
+python main/rag_server.py
+```
+
+**Bước 3** — chạy Spring Boot:
+
+```bash
+cd chatbot
 ./mvnw spring-boot:run
 ```
 
@@ -142,7 +150,7 @@ $env:JAVA_HOME = "C:\Program Files\Java\jdk-23"
 
 Mở trình duyệt: [http://localhost:8081](http://localhost:8081)
 
-> Python backend không cần khởi động riêng — Spring Boot gọi trực tiếp `main/rag_cli.py` qua CLI.
+> FastAPI chạy ở port 8000, Spring Boot gọi qua `http://localhost:8000/ask`. Model chỉ load 1 lần khi khởi động FastAPI.
 
 ---
 

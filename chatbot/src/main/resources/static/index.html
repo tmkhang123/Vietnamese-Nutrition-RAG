@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hỏi Đáp Dinh Dưỡng Thông Minh</title>
+    <title>NutriCare AI — Tư vấn Dinh dưỡng &amp; Sức khỏe</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -18,29 +18,26 @@
                 <span class="material-symbols-outlined">search</span>
             </button>
         </div>
-        
-        <button class="nav-item new-chat-btn">
+
+        <button class="nav-item new-chat-btn" id="new-chat-btn">
             <span class="material-symbols-outlined">add</span>
             <span class="nav-text">Cuộc trò chuyện mới</span>
         </button>
-        <button class="nav-item">
+        <button class="nav-item" id="dashboard-toggle-btn">
             <span class="material-symbols-outlined">dashboard</span>
             <span class="nav-text">Dashboard của tôi</span>
         </button>
-        
-        <div class="recent-section">
-            <div class="recent-title">Hôm nay</div>
-            <div class="chat-history-item">
-                <span class="material-symbols-outlined">chat_bubble</span>
-                <span class="text-truncate">Thực đơn Eat Clean</span>
-            </div>
+
+        <div class="recent-section" id="recent-section">
+            <div class="recent-title">Gần đây</div>
+            <div id="chat-history-list"></div>
         </div>
     </aside>
 
     <main class="main-content">
         <header class="top-header">
-            <div class="app-name">AI Dinh Dưỡng</div>
-            <div class="avatar" id="avatar-btn" title="Tài khoản Google">
+            <div class="app-name">NutriCare AI</div>
+            <div class="avatar" id="avatar-btn" title="Tài khoản">
                 <img src="https://ui-avatars.com/api/?name=User&background=random" alt="Avatar">
             </div>
         </header>
@@ -51,11 +48,10 @@
                 <div class="profile-name" id="popup-fullname">Chào bạn,</div>
                 <button class="manage-acc-btn">Quản lý Tài khoản của bạn</button>
             </div>
-            
+
             <div class="account-list-container">
                 <div class="account-list-title">Các tài khoản đã lưu</div>
-                <div class="account-list" id="account-list">
-                    </div>
+                <div class="account-list" id="account-list"></div>
             </div>
 
             <div class="profile-actions">
@@ -70,9 +66,12 @@
 
         <div class="chat-container" id="chat-container">
             <div class="welcome-area" id="welcome-area">
+                <div class="welcome-icon">
+                    <span class="material-symbols-outlined">nutrition</span>
+                </div>
                 <div class="greeting">
-                    <h1>Xin chào!</h1>
-                    <h2>Hôm nay bạn muốn ăn gì nhỉ?</h2>
+                    <h1 id="greeting-headline">Xin chào!</h1>
+                    <h2>Bạn cần tư vấn gì?</h2>
                 </div>
             </div>
             <div class="messages-wrapper" id="messages-wrapper"></div>
@@ -85,17 +84,26 @@
                     <span class="material-symbols-outlined">send</span>
                 </button>
             </div>
-            <div class="suggestions" id="suggestions">
-                <button class="chip"><span class="material-symbols-outlined" style="color: #5bb974;">restaurant</span> Lên thực đơn</button>
-                <button class="chip"><span class="material-symbols-outlined" style="color: #f28b82;">monitor_weight</span> Tính Calo & TDEE</button>
-            </div>
         </div>
     </main>
 
+    <!-- Dashboard side panel -->
+    <div id="dashboard-panel" class="dashboard-panel hidden">
+        <div class="dash-header">
+            <span class="material-symbols-outlined" style="color: var(--color-accent);">dashboard</span>
+            <h3>Nhật ký Dinh Dưỡng</h3>
+            <button id="close-dashboard" class="icon-btn">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div id="dashboard-list" class="dash-list"></div>
+    </div>
+
+    <!-- Auth Modal -->
     <div class="modal-overlay" id="auth-modal">
         <div class="modal-content">
             <button class="close-btn" id="close-modal"><span class="material-symbols-outlined">close</span></button>
-            
+
             <div class="auth-tabs">
                 <button class="auth-tab active" id="tab-login">Đăng nhập</button>
                 <button class="auth-tab" id="tab-register">Đăng ký</button>
@@ -118,6 +126,7 @@
         </div>
     </div>
 
+    <script src="/js/marked.min.js"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>

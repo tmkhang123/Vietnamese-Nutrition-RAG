@@ -18,7 +18,7 @@ import io.jsonwebtoken.security.SignatureException;
 public class JwtUtil {
     // Dùng secret cố định từ config để token không bị invalid sau mỗi lần restart app.
     private final Key key;
-    private final int expirationTime = 86400000; // 1 ngày (tính bằng miliseconds)
+    private final long expirationTime = 604800000L; // 7 ngày (tính bằng miliseconds)
 
     public JwtUtil(
             @Value("${jwt.secret:chatbot-default-secret-key-please-change-this-in-production-2026}") String jwtSecret) {
