@@ -121,36 +121,38 @@ Notebook này fine-tune `vinai/phobert-base` để nhận diện thực thể FO
 
 **Yêu cầu:** JDK 21+, Maven, Python environment đã cài
 
-**Bước 1** — đảm bảo Ollama đang chạy:
+> Cần mở **3 terminal riêng** — mỗi tiến trình chạy độc lập và không thoát.
+
+**Terminal 1** — Ollama:
 
 ```bash
 ollama serve
 ```
 
-**Bước 2** — khởi động FastAPI server (load model 1 lần):
+**Terminal 2** — FastAPI server (load model 1 lần, giữ chạy):
 
 ```bash
 conda activate nutrition-rag
 python main/rag_server.py
 ```
 
-**Bước 3** — chạy Spring Boot:
+**Terminal 3** — Spring Boot:
 
 ```bash
 cd chatbot
-./mvnw spring-boot:run
+mvnw spring-boot:run
 ```
 
 Trên Windows nếu cần set JAVA_HOME:
 
 ```powershell
 $env:JAVA_HOME = "C:\Program Files\Java\jdk-23"
-./mvnw spring-boot:run
+.\mvnw spring-boot:run
 ```
 
 Mở trình duyệt: [http://localhost:8081](http://localhost:8081)
 
-> FastAPI chạy ở port 8000, Spring Boot gọi qua `http://localhost:8000/ask`. Model chỉ load 1 lần khi khởi động FastAPI.
+> FastAPI (port 8000) phải chạy trước khi gửi tin nhắn — Spring Boot khởi động được dù FastAPI chưa bật, nhưng chat sẽ báo lỗi.
 
 ---
 
