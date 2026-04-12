@@ -46,3 +46,4 @@ src/data/
 # NER model weights (~500MB)
 # Cách lấy: fine-tune bằng notebooks/phobert_ner_finetune.ipynb (Colab) rồi giải nén vào models/ner_phobert/
 models/
+CLAUDE.md
